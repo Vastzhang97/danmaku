@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>无名小站╮(￣⊿￣)╭_首页</title>
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <!--<link href="index.css" rel="stylesheet" type="text/css">-->
+</head>
+
+<body>
+<div id="mainDiv">
+    <div id="headDiv-max" class="head-items">
+        <a href="/goToIndex" target="_blank">
+            <div class="head-list-items head-list-items-first ">首&nbsp;页</div>
+        </a>
+        <!-- <div class="head-list-items ">列表2</div>
+        <div class="head-list-items ">列表3</div>
+        <div class="head-list-items">列表4</div> -->
+        <a class="unlogin" href="/goToLogin">
+            <div class="head-list-items head-list-items-second">登&nbsp;录</div>
+        </a>
+        <a class="unlogin" href="/goToRegister">
+            <div class="head-list-items">注&nbsp;册</div>
+        </a>
+        <div class="head-list-items unlogin head-submit">投&nbsp;稿</div>
+
+        <div class="islogin">
+            <a href="/goToInfor" target="_blank">
+                <div class="head-list-items head-list-items-islogin">
+                    <img class="islogin-title" src="images/defaultHeadshot.jpg"/>
+                </div>
+            </a>
+            <a href="/goToMessage" target="_blank">
+                <div class="head-list-items head-list-items-msg">消息
+                    <div class="msg-tip">
+                        <img src="images/msg.gif"/>
+                    </div>
+                </div>
+            </a>
+            <a href="/goToInfor" target="_blank">
+                <div class="head-list-items">收藏夹</div>
+            </a>
+            <div class="head-list-items head-list-items-play nav">播放历史
+                <div class="play-past nav">
+
+                    <!--<div class="play-past-item">-->
+                    <!--<div class="play-past-title">视频标题</div>-->
+                    <!--<div class="play-past-date">时间</div>-->
+                    <!--</div>-->
+                    <!--<div class="play-past-item">-->
+                    <!--<div class="play-past-title">视频标题</div>-->
+                    <!--<div class="play-past-date">时间</div>-->
+                    <!--</div>-->
+                    <div class="play-past-item play-past-more">查看更多>></div>
+                </div>
+            </div>
+            <div class="head-list-items head-submit">投&nbsp;稿</div>
+        </div>
+    </div>
+    <div class="head-items head-items-mild">
+        <div class="head-title">╮(￣⊿￣)╭</div>
+        <div class="head-item-input head-item-input-max">
+            <select class="head-item-select">
+                <option value="0">全部</option>
+                <option value="1">动画</option>
+                <option value="2">音乐</option>
+                <option value="3">游戏</option>
+                <option value="4">鬼畜</option>
+                <option value="5">舞蹈</option>
+                <option value="6">体育</option>
+                <option value="7">科技</option>
+            </select>
+            <input type="text" id="searchInput" class="search-item"/>
+            <input type="button" id="searchBtn" class="search-btn nav" value="搜索">
+        </div>
+    </div>
+    <div class="head-items head-items-options head-items-options-min">
+        <div name="1" class="head-options head-options-first">动&nbsp;画</div>
+        <div name="2" class="head-options nav">音&nbsp;乐</div>
+        <div name="3" class="head-options nav">游&nbsp;戏</div>
+        <div name="4" class="head-options nav">鬼&nbsp;畜</div>
+        <div name="5" class="head-options nav">舞&nbsp;蹈</div>
+        <div name="6" class="head-options nav">体&nbsp;育</div>
+        <div name="7" class="head-options nav">科&nbsp;技</div>
+    </div>
+    <div class="main-items">
+        <div class="images-change">
+            <div id="banner" class="pic">
+                <a href="#" style="display:block">
+                    <img class="image-item" src="images/ad1.jpg"/>
+                </a>
+                <a href="#">
+                    <img class="image-item" src="images/ad2.jpg"/>
+                </a>
+                <a href="#">
+                    <img class="image-item" src="images/ad3.jpg"/>
+                </a>
+                <a href="#">
+                    <img class="image-item" src="images/ad4.jpg"/>
+                </a>
+                <a href="#">
+                    <img class="image-item" src="images/ad5.jpg"/>
+                </a>
+                <a href="#">
+                    <img class="image-item" src="images/ad6.jpg"/>
+                </a>
+            </div>
+            <div id="banner-btn" class="btn">
+                <div id="banner-btn-list" class="btn-list">
+                    <div class="one">1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                </div>
+            </div>
+        </div>
+        <div class="hot-list hot-list-max">
+
+        </div>
+    </div>
+    <div class="main-items main-items-title-hot">
+        <div class="main-items-title">
+            <img src="images/category1.png"/>
+            <span class="main-item-head">热门推荐</span>
+            <span class="main-item-more nav">更多></span>
+        </div>
+        <div class="hot-list">
+
+        </div>
+    </div>
+    <div id="headDiv-min">
+        <div id="headList" class="head-items head-items-min">首页</div>
+        <div id="headListDiv" class="head-list">
+            <a href="#">
+                <div class="head-items head-items-min">动画</div>
+            </a>
+            <a href="#">
+                <div class="head-items head-items-min">音乐</div>
+            </a>
+            <a href="#">
+                <div class="head-items head-items-min">游戏</div>
+            </a>
+            <a href="#">
+                <div class="head-items head-items-min">鬼畜</div>
+            </a>
+            <a href="#">
+                <div class="head-items head-items-min">舞蹈</div>
+            </a>
+            <a href="#">
+                <div class="head-items head-items-min">体育</div>
+            </a>
+            <a href="#">
+                <div class="head-items head-items-min">科技</div>
+            </a>
+        </div>
+    </div>
+    <a href="/goToInfor">
+        <div class="min-user">
+            <img src="images/goToTop.png"/>
+        </div>
+    </a>
+    <div class="main-items">
+        <div class="main-items-title">
+            <img src="images/category1.png"/>
+            <span class="main-item-head">动画区</span>
+            <span name="1" class="main-item-more nav">更多></span>
+        </div>
+        <div id="video-1" class="main-items-video">
+
+        </div>
+    </div>
+    <div class="main-items">
+        <div class="main-items-title">
+            <img src="images/category2.png"/>
+            <span class="main-item-head">音乐区</span>
+            <span name="2" class="main-item-more nav">更多></span>
+        </div>
+        <div id="video-2" class="main-items-video">
+
+        </div>
+    </div>
+    <div class="main-items">
+        <div class="main-items-title">
+            <img src="images/category3.png"/>
+            <span class="main-item-head">游戏区</span>
+            <span name="3" class="main-item-more nav">更多></span>
+        </div>
+        <div id="video-3" class="main-items-video">
+            <!--<a href="#">
+                <div class="area-item">
+                    <img class="hot-image" src="images/6.jpg" />
+                    <div class="hot-video-text">
+                        <div class="hot-video-title">
+                            <div class="video-infor-title">视频标题</div>
+                        </div>
+                        <div class="hot-video-type">
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    播放量
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    弹幕数
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    人气值
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="area-item">
+                    <img class="hot-image" src="images/6.jpg" />
+                    <div class="hot-video-text">
+                        <div class="hot-video-title">
+                            <div class="video-infor-title">视频标题</div>
+                        </div>
+                        <div class="hot-video-type">
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    播放量
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    弹幕数
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    人气值
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="area-item">
+                    <img class="hot-image" src="images/6.jpg" />
+                    <div class="hot-video-text">
+                        <div class="hot-video-title">
+                            <div class="video-infor-title">视频标题</div>
+                        </div>
+                        <div class="hot-video-type">
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    播放量
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    弹幕数
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    人气值
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="area-item">
+                    <img class="hot-image" src="images/6.jpg" />
+                    <div class="hot-video-text">
+                        <div class="hot-video-title">
+                            <div class="video-infor-title">视频标题</div>
+                        </div>
+                        <div class="hot-video-type">
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    播放量
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    弹幕数
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    人气值
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>-->
+        </div>
+    </div>
+    <div class="main-items">
+        <div class="main-items-title">
+            <img src="images/category4.png"/>
+            <span class="main-item-head">鬼畜区</span>
+            <span name="4" class="main-item-more nav">更多></span>
+        </div>
+        <div id="video-4" class="main-items-video">
+            <!--<a href="#">
+                <div class="area-item">
+                    <img class="hot-image" src="images/3.jpg" />
+                    <div class="hot-video-text">
+                        <div class="hot-video-title">
+                            <div class="video-infor-title">视频标题</div>
+                        </div>
+                        <div class="hot-video-type">
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    播放量
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    弹幕数
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    人气值
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="area-item">
+                    <img class="hot-image" src="images/3.jpg" />
+                    <div class="hot-video-text">
+                        <div class="hot-video-title">
+                            <div class="video-infor-title">视频标题</div>
+                        </div>
+                        <div class="hot-video-type">
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    播放量
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    弹幕数
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    人气值
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="area-item">
+                    <img class="hot-image" src="images/3.jpg" />
+                    <div class="hot-video-text">
+                        <div class="hot-video-title">
+                            <div class="video-infor-title">视频标题</div>
+                        </div>
+                        <div class="hot-video-type">
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    播放量
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    弹幕数
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    人气值
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="area-item">
+                    <img class="hot-image" src="images/3.jpg" />
+                    <div class="hot-video-text">
+                        <div class="hot-video-title">
+                            <div class="video-infor-title">视频标题</div>
+                        </div>
+                        <div class="hot-video-type">
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    播放量
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    弹幕数
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    人气值
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>-->
+        </div>
+    </div>
+    <div class="main-items">
+        <div class="main-items-title">
+            <img src="images/category5.png"/>
+            <span class="main-item-head">舞蹈区</span>
+            <span name="5" class="main-item-more nav">更多></span>
+        </div>
+        <div id="video-5" class="main-items-video">
+            <!--<a href="#">
+                <div class="area-item">
+                    <img class="hot-image" src="images/4.jpg" />
+                    <div class="hot-video-text">
+                        <div class="hot-video-title">
+                            <div class="video-infor-title">视频标题</div>
+                        </div>
+                        <div class="hot-video-type">
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    播放量
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    弹幕数
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    人气值
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="area-item">
+                    <img class="hot-image" src="images/4.jpg" />
+                    <div class="hot-video-text">
+                        <div class="hot-video-title">
+                            <div class="video-infor-title">视频标题</div>
+                        </div>
+                        <div class="hot-video-type">
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    播放量
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    弹幕数
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    人气值
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="area-item">
+                    <img class="hot-image" src="images/4.jpg" />
+                    <div class="hot-video-text">
+                        <div class="hot-video-title">
+                            <div class="video-infor-title">视频标题</div>
+                        </div>
+                        <div class="hot-video-type">
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    播放量
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    弹幕数
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    人气值
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="area-item">
+                    <img class="hot-image" src="images/4.jpg" />
+                    <div class="hot-video-text">
+                        <div class="hot-video-title">
+                            <div class="video-infor-title">视频标题</div>
+                        </div>
+                        <div class="hot-video-type">
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    播放量
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    弹幕数
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    人气值
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>-->
+        </div>
+    </div>
+    <div class="main-items">
+        <div class="main-items-title">
+            <img src="images/category6.png"/>
+            <span class="main-item-head">体育区</span>
+            <span name="6" class="main-item-more nav">更多></span>
+        </div>
+        <div id="video-6" class="main-items-video">
+            <!--<a href="#">
+                <div class="area-item">
+                    <img class="hot-image" src="images/5.jpg" />
+                    <div class="hot-video-text">
+                        <div class="hot-video-title">
+                            <div class="video-infor-title">视频标题</div>
+                        </div>
+                        <div class="hot-video-type">
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    播放量
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    弹幕数
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    人气值
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="area-item">
+                    <img class="hot-image" src="images/5.jpg" />
+                    <div class="hot-video-text">
+                        <div class="hot-video-title">
+                            <div class="video-infor-title">视频标题</div>
+                        </div>
+                        <div class="hot-video-type">
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    播放量
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    弹幕数
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    人气值
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="area-item">
+                    <img class="hot-image" src="images/5.jpg" />
+                    <div class="hot-video-text">
+                        <div class="hot-video-title">
+                            <div class="video-infor-title">视频标题</div>
+                        </div>
+                        <div class="hot-video-type">
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    播放量
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    弹幕数
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    人气值
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="area-item">
+                    <img class="hot-image" src="images/5.jpg" />
+                    <div class="hot-video-text">
+                        <div class="hot-video-title">
+                            <div class="video-infor-title">视频标题</div>
+                        </div>
+                        <div class="hot-video-type">
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    播放量
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    弹幕数
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    人气值
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>-->
+        </div>
+    </div>
+    <div class="main-items">
+        <div class="main-items-title">
+            <img src="images/category7.png"/>
+            <span class="main-item-head">科技区</span>
+            <span name="7" class="main-item-more nav">更多></span>
+        </div>
+        <div id="video-7" class="main-items-video">
+            <!--<a href="#">
+                <div class="area-item">
+                    <img class="hot-image" src="images/6.jpg" />
+                    <div class="hot-video-text">
+                        <div class="hot-video-title">
+                            <div class="video-infor-title">视频标题</div>
+                        </div>
+                        <div class="hot-video-type">
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    播放量
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    弹幕数
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    人气值
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="area-item">
+                    <img class="hot-image" src="images/6.jpg" />
+                    <div class="hot-video-text">
+                        <div class="hot-video-title">
+                            <div class="video-infor-title">视频标题</div>
+                        </div>
+                        <div class="hot-video-type">
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    播放量
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    弹幕数
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    人气值
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="area-item">
+                    <img class="hot-image" src="images/6.jpg" />
+                    <div class="hot-video-text">
+                        <div class="hot-video-title">
+                            <div class="video-infor-title">视频标题</div>
+                        </div>
+                        <div class="hot-video-type">
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    播放量
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    弹幕数
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    人气值
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="area-item">
+                    <img class="hot-image" src="images/6.jpg" />
+                    <div class="hot-video-text">
+                        <div class="hot-video-title">
+                            <div class="video-infor-title">视频标题</div>
+                        </div>
+                        <div class="hot-video-type">
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    播放量
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    弹幕数
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    人气值
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>-->
+        </div>
+    </div>
+    <div id="fixedList" class="fixed-list">
+        <div class="fixed-list-items" onclick="goTop()">
+            <img class="fixed-image" src="images/goToTop.png"/>
+        </div>
+    </div>
+    <div id="advice" onclick="advice()">
+        <img class="fixed-image" src="images/advice.png"/>
+    </div>
+
+</div>
+</body>
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/statistics.js"></script>
+
+</html>

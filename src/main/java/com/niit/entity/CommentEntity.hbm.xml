@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.niit.entity.CommentEntity" table="comment" schema="danmaku">
+        <id name="cid" column="cid"/>
+        <property name="vid" column="vid"/>
+        <property name="uid" column="uid"/>
+        <property name="rid" column="rid"/>
+        <property name="rcid" column="rcid"/>
+        <property name="content" column="content"/>
+        <property name="likenum" column="likenum"/>
+        <property name="date" column="date"/>
+        <property name="mark" column="mark"/>
+        <property name="status" column="status"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>视频投稿</title>
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/contribution.js"></script>
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link href="css/contribution.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="mainDiv">
+    <div id="headDiv-max" class="head-items">
+        <a href="/goToIndex" target="blank">
+            <div class="head-list-items head-list-items-first ">首&nbsp;页</div>
+        </a>
+        <a class="unlogin" href="/goToLogin" target="blank">
+            <div class="head-list-items head-list-items-second">登&nbsp;录</div>
+        </a>
+        <a class="unlogin" href="/goToRegister" target="blank">
+            <div class="head-list-items">注&nbsp;册</div>
+        </a>
+        <div class="head-list-items unlogin head-submit">投&nbsp;稿</div>
+
+        <div class="islogin">
+            <a href="/goToInfor" target="blank">
+                <div class="head-list-items head-list-items-islogin">
+                    <img class="islogin-title" src="images/defaultHeadshot.jpg"/>
+                </div>
+            </a>
+            <a href="/goToMessage" target="blank">
+                <div class="head-list-items head-list-items-msg">消息
+                    <div class="msg-tip">
+                        <img src="images/msg.png"/>
+                    </div>
+                </div>
+            </a>
+            <a href="/goToInfor" target="blank">
+                <div class="head-list-items">收藏夹</div>
+            </a>
+            <div class="head-list-items head-list-items-play nav">播放历史
+                <div class="play-past nav">
+                    <div class="play-past-item play-past-more">查看更多>></div>
+                </div>
+            </div>
+            <div class="head-list-items head-submit">投&nbsp;稿</div>
+        </div>
+    </div>
+    <div id="headDiv-min">
+        <div id="headList" class="head-items head-items-min">视频</div>
+        <div id="headListDiv" class="head-list">
+            <a href="/goToIndex">
+                <div class="head-items head-items-min">首页</div>
+            </a>
+            <a href="#">
+                <div class="head-items head-items-min">动画</div>
+            </a>
+            <a href="#">
+                <div class="head-items head-items-min">音乐</div>
+            </a>
+            <a href="#">
+                <div class="head-items head-items-min">游戏</div>
+            </a>
+            <a href="#">
+                <div class="head-items head-items-min">鬼畜</div>
+            </a>
+            <a href="#">
+                <div class="head-items head-items-min">舞蹈</div>
+            </a>
+            <a href="#">
+                <div class="head-items head-items-min">体育</div>
+            </a>
+            <a href="#">
+                <div class="head-items head-items-min">科技</div>
+            </a>
+        </div>
+    </div>
+    <div class="contribution-title">
+        <span>创作中心-</span>视频投稿
+    </div>
+    <div class="contribution-div">
+        <form id="form" class="form" enctype="multipart/form-data" method="post">
+            <div class="contribution-item contribution-item-first">
+                <div class="contribution-item-span">视频标题：</div>
+                <div class="contribution-item-content">
+                    <input type="text" name="title" class="contribution-video-title"/>
+                </div>
+            </div>
+            <div class="contribution-item">
+                <div class="contribution-item-span">视频分类：</div>
+                <div class="contribution-item-content">
+                    <select name="type" class="head-item-select nav">
+                        <option value="1">动画</option>
+                        <option value="2">音乐</option>
+                        <option value="3">游戏</option>
+                        <option value="4">鬼畜</option>
+                        <option value="5">舞蹈</option>
+                        <option value="6">体育</option>
+                        <option value="7">科技</option>
+                    </select>
+                </div>
+            </div>
+            <div class="contribution-item">
+                <div class="contribution-item-span">视频封面：</div>
+                <div class="contribution-item-content">
+                    <input type="button" id="submitCoverResource" class="contribution-file-btn nav" value="选择视频封面">
+                    <input type="file" name="imgFile" id="coverResource" class="contribution-file"
+                           accept="image/jpeg, image/png">
+                    <div class="contribution-item-tip contribution-img">
+                        图片支持jpg,png格式
+                    </div>
+                </div>
+            </div>
+            <div class="contribution-item">
+                <div class="contribution-item-span">上传视频：</div>
+                <div class="contribution-item-content">
+                    <input type="button" id="submitVidoeResource" class="contribution-file-btn nav" value="选择视频资源">
+                    <input type="file" name="videoFile" id="vidoeResource" class="contribution-file"
+                           accept="video/*">
+                    <div class="contribution-item-tip contribution-video">
+                        视频超过10M播放会很卡呢┓( ´∀` )┏
+                    </div>
+                </div>
+            </div>
+            <div class="contribution-item contribution-item-intro">
+                <div class="contribution-item-span">视频简介：</div>
+                <div class="contribution-item-content contribution-item-content-intro">
+                    <textarea id="videoIntro" class="videoIntro"></textarea>
+                </div>
+            </div>
+            <div class="contribution-item center">
+                <input type="button" id="submitVideo" class="contribution-submit nav" value="投稿"
+                       onclick="doUpload()">
+            </div>
+            <div class="contribution-item contributionProgress">
+                <div class="contribution-item-span">上传进度:</div>
+                <div id="progressBar">
+                    <div id="progressNumber"></div>
+                </div>
+                <div id="percent"></div>
+                <!--上传成功!,<a href='/goToIndex'>返回首页</a>-->
+            </div>
+        </form>
+    </div>
+    <!--<div id="fixedList" class="fixed-list">-->
+        <!--<div class="fixed-list-items" onclick="goTop()">-->
+            <!--<img class="fixed-image" src="images/goToTop.png"/>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
+</body>
+
+</html>

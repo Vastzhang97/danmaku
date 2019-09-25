@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            $.ajax({
+                type: "POST",
+                url: "/Admin/getPendingDanmaku",
+                contentType: "application/json",
+                dataType: "json",
+                async: true,
+                cache: false,
+                success: function (data) {
+
+                    var danmaku = data;
+                    console.log(danmaku);
+                    addDanmaku(danmaku);
+                },
+                error: function (json) {
+                    alert("获取所有用户出错！");
+                }
+            });
+        });
+
+        function addDanmaku(danmaku) {
+            var table1 = "<tr>" + "<tr>\n" +
+                "<th>did</th>\n" +
+                "<th>vid</th>\n" +
+                "<th>用户名</th>\n" +
+                "<th>内容</th>\n" +
+                "<th>发送时间</th>\n" +
+                "<th>在视频内时间</th>\n" +
+                "<th>解除禁止</th>" +
+                "<th>禁止弹幕</th>" +
+                "</tr>";
+            $("#userInfo").append(table1);
+            console.log(danmaku.length);
+            for (var index = 0; index < danmaku.length; index++) {
+                var did = danmaku[index].did; //私信用户
+                var vid = danmaku[index].vid;
+                var content = danmaku[index].content;
+                var author = danmaku[index].author;
+                var date = danmaku[index].dbDate;
+                var currenttime = danmaku[index].dbCurrenttime;
+
+                var result = "<tr>" +
+                    "<td>" + did + "</td>" +
+                    "<td>" + vid + "</td>" +
+                    "<td>" + author + "</td>" +
+                    "<td>" + content + "</td>" +
+                    "<td>" + date + "</td>" +
+                    "<td>" + currenttime + "</td>" +
+                    "<td><input name='" + did + "' class='enableBtn' type=\"button\" value=\"√\"></td>" +
+                    "<td><input name='" + did + "' class='disableBtn' type=\"button\" value=\"×\"></td>" + "</tr>";
+
+                $("#userInfo").append(result);
+            }
+        }
+
+        $(document).on("click", ".enableBtn", function () {
+            var did = Number($(this).attr("name"));
+            $.ajax({
+                type: "POST",
+                url: "/Admin/passDanmaku",
+                contentType: "application/json",
+                data: JSON.stringify({
+                    "did": did
+                }),
+                dataType: "json",
+                async: true,
+                cache: false,
+                success: function (data) {
+                    location.reload();
+                },
+                error: function (json) {
+                    alert("禁用用户出错！");
+                }
+            });
+        });
+        $(document).on("click", ".disableBtn", function () {
+            var did = Number($(this).attr("name"));
+            $.ajax({
+                type: "POST",
+                url: "/Admin/unPassDanmaku",
+                contentType: "application/json",
+                data: JSON.stringify({
+                    "did": did
+                }),
+                dataType: "json",
+                async: true,
+                cache: false,
+                success: function (data) {
+                    location.reload();
+                },
+                error: function (json) {
+                    alert("解除用户禁用出错！");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<table id="userInfo">
+</table>
+</body>
+</html>

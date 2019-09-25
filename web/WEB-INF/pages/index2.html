@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="/js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="/js/ajaxfileupload.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //按钮单击时执行
+            $("#testAjax").click(function () {
+                //Ajax调用处理
+                $.ajax({
+                    type: "POST",
+                    url: "/test",
+                    contentType: "application/json", //必须有
+                    dataType: "json", //表示返回值类型，不必须
+                    data: JSON.stringify({"uname": "panghu", "uid": 1}),  //相当于 //data: "{'str1':'foovalue', 'str2':'barvalue'}",
+                    success: function (jsonResult) {
+                    }
+                });
+
+            });
+        });
+        $(function () {
+            //按钮单击时执行
+            $("#login1").click(function () {
+                //Ajax调用处理
+                $.ajax({
+                    type: "POST",
+                    url: "/login",
+                    contentType: "application/json", //必须有
+                    dataType: "json", //表示返回值类型，不必须
+                    data: JSON.stringify({'uname': 'panghu', 'password': '10001000'}),  //相当于 //data: "{'str1':'foovalue', 'str2':'barvalue'}",
+                    success: function (jsonResult) {
+                    }
+                });
+
+            });
+        });
+        $(function () {
+            //按钮单击时执行
+            $("#login2").click(function () {
+                //Ajax调用处理
+                $.ajax({
+                    type: "POST",
+                    url: "/login",
+                    contentType: "application/json", //必须有
+                    dataType: "json", //表示返回值类型，不必须
+                    data: JSON.stringify({'uname': 'user1', 'password': '10001000'}),  //相当于 //data: "{'str1':'foovalue', 'str2':'barvalue'}",
+                    success: function (jsonResult) {
+                    }
+                });
+
+            });
+        });
+        $(function () {
+            //按钮单击时执行
+            $("#register").click(function () {
+                //Ajax调用处理
+                $.ajax({
+                    type: "POST",
+                    url: "/register",
+                    contentType: "application/json", //必须有
+                    dataType: "json", //表示返回值类型，不必须
+                    data: JSON.stringify({'uname': 'xiaofu1', 'password': '10001000'}),  //相当于 //data: "{'str1':'foovalue', 'str2':'barvalue'}",
+                    success: function (jsonResult) {
+                    }
+                });
+
+            });
+        });
+        $(function () {
+            //按钮单击时执行
+            $("#getDanmaku").click(function () {
+                //Ajax调用处理
+                $.ajax({
+                    type: "POST",
+                    url: "/getDanmaku ",
+                    contentType: "application/json", //必须有
+                    dataType: "json", //表示返回值类型，不必须
+                    data: JSON.stringify({"vid": 1}),  //相当于 //data: "{'str1':'foovalue', 'str2':'barvalue'}",
+                    success: function (jsonResult) {
+                    }
+                });
+
+            });
+        });
+
+        function uploads() {
+            $.ajaxFileUpload
+            ({
+                url: '/upload', //用于文件上传的服务器端请求地址
+                type: 'post',
+                secureuri: false, //是否需要安全协议，一般设置为false
+                fileElementId: 'file1', //文件上传域的ID
+                data: {
+                    "uid": 1
+                },//一同上传的数据
+                dataType: 'json', //返回值类型一般设置为json
+                success: function (data, status)  //服务器成功响应处理函数
+                {
+                    if (data > 0) {
+                        alert("上传成功");
+                    } else {
+                        alert("上传失败");
+                    }
+                }
+            })
+        }
+
+        /**
+         * 上传文件
+         */
+        var xmlhttp;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        //上传文件
+        function doUpload() {
+            var formData = new FormData($("#form")[0]);
+            //监听事件
+            xmlhttp.upload.addEventListener("progress", uploadProgress, false);
+            //发送文件和表单自定义参数
+            xmlhttp.open("POST", "upload2", true);
+            xmlhttp.send(formData);
+        }
+
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                $("#result").html("上传成功！" + "<a href='index.jsp'>返回首页</a>");
+            }
+        }
+
+        function uploadProgress(evt) {
+            if (evt.lengthComputable) {
+                //evt.loaded：文件上传的大小   evt.total：文件总的大小
+                var percentComplete = Math.round((evt.loaded) * 100 / evt.total);
+                //加载进度条，同时显示信息
+                $("#percent").html(percentComplete + '%')
+                $("#progressNumber").css("width", "" + percentComplete * 2.5 + "px");
+            }
+        }
+
+        /*------------------------------------------------------------------*/
+        /*头像上传 part2*/
+        var filechange = function (event) {
+            var files = event.target.files, file;
+            if (files && files.length > 0) {
+                // 获取目前上传的文件
+                file = files[0];// 文件大小校验的动作
+                if (file.size > 1024 * 1024 * 2) {
+                    alert('图片大小不能超过 2MB!');
+                    return false;
+                }
+                // 获取 window 的 URL 工具
+                var URL = window.URL || window.webkitURL;
+                // 通过 file 生成目标 url
+                var imgURL = URL.createObjectURL(file);
+                //用attr将img的src属性改成获得的url
+                $("#img-change").attr("src", imgURL);
+                // 使用下面这句可以在内存中释放对此 url 的伺服，跑了之后那个 URL 就无效了
+                // URL.revokeObjectURL(imgURL);
+            }
+        };
+        /*头像上传 part2*/
+        $(function () {
+            $("#img-change").click(function () {
+                $("#file").click();
+            })
+            /*$("#file").change(function (event) {*/
+            // $("#btn").click(function () {
+            //     $.ajaxFileUpload({
+            //         url: '/upload',
+            //         type: 'post',
+            //         data: {
+            //             uid: 1
+            //         },
+            //         fileElementId: 'file',
+            //         dataType: 'JSON', //返回值类型，一般设置为json、application/json  这里要用大写  不然会取不到返回的数据
+            //         secureuri: false,
+            //         success: function (data) {
+            //             if (data == "yes") {
+            //                 $("#img-alert").css("display", "block");
+            //             }
+            //         },
+            //         error: function (data, status, e) {
+            //             alert(e);
+            //         }
+            //     });
+            // });
+
+            $("#btn").click(function () {
+                $.ajaxFileUpload({
+                    url: '/PersonalCenter/imgUpload',
+                    fileElementId:'file',
+                    dataType:'txt',
+                    secureuri : false,
+                    success: function (data){
+                        // if(data=="yes"){
+                        //     alert("yes!")
+                        //     $("#img-alert").css("display","block");
+                        // }
+                    },
+                    error:function(data,status,e){
+                        alert(e);
+                    }
+                });
+            });
+        });
+
+        /*WebSocket*/
+        $(function () {
+            var ws = new WebSocket("ws://localhost:8080/MessageWebSocket")
+
+            $("#msgBtn1").click(function () {
+                var context = $("#msg1").val(); //消息内容
+                var sid = $(".sid").html();  //发送者id
+                var rid = $(".rid").html();  //接收者id
+                var msg = '{' + '"sid":' + sid + ',' + '"rid":' + rid + ',' + '"context":' + '"' + context + '"' + '}';
+
+                ws.send(msg);
+            });
+
+            $.ajax({
+                url: "/test1",
+                success: function (result) {
+                    // console.log("reslut " + result);
+                    ws.onopen = function () {
+                        console.log("onpen");
+                    }
+                    ws.onclose = function () {
+                        console.log("onclose");
+                    }
+                    ws.onmessage = function (msg) {
+                        console.log(msg.data);
+                    }
+                }
+            });
+        })
+
+        $(function () {
+            var ws = new WebSocket("ws://localhost:8080/VideoWebSocket?vid=2")
+
+            $("#msgBtn2").click(function () {
+                var context = $("#msg2").val(); //消息内容
+                var sid = $(".sid").html();  //发送者id
+                var rid = $(".rid").html();  //接收者id
+                var msg = '{' + '"sid":' + sid + ',' + '"rid":' + rid + ',' + '"context":' + '"' + context + '"' + '}';
+
+                ws.send(msg);
+            });
+
+            $.ajax({
+                url: null,
+                success: function (result) {
+                    // console.log("reslut " + result);
+                    ws.onopen = function () {
+                        console.log("onpen");
+                    }
+                    ws.onclose = function () {
+                        console.log("onclose");
+                    }
+                    ws.onmessage = function (msg) {
+                        console.log(msg.data);
+                    }
+                }
+            });
+        })
+    </script>
+</head>
+<style>
+    #progressBar {
+        margin: 0 auto;
+        background: #848484;
+        width: 250px;
+        height: 10px;
+        margin-top: 5px;
+    }
+
+    #progressNumber {
+        background: #428bca;
+        width: 0px;
+        height: 10px
+    }
+
+</style>
+<body>
+<h1>Index.html!</h1>
+<button id="testAjax" type="button">Test</button>
+<button id="login1" type="button">Login1</button>
+<button id="login2" type="button">Login2</button>
+<button id="register" type="button">Register</button>
+<button id="addDanmaku" type="button">addDanmaku</button>
+<button id="getDanmaku" type="button">getDanmaku</button>
+<br/>
+<h1>上传头像</h1>
+<input type="file" id="file" name="file" onchange="filechange(event)">
+<img src="" width="200px" height="200px" id="img-change">
+<button id="btn">保存图片</button>
+<h1>上传视频</h1><br>
+<div>
+    <form id="form" enctype="multipart/form-data" method="post">
+        uid：<input id="uidInput" name="uid" type="text" placeholder="输入视频标题..." required="required "/><br><br>
+        作者：<input id="authorInput" name="author" type="text" placeholder="输入视频标题..." required="required "/><br><br>
+        标题：<input id="nameInput" name="title" type="text" placeholder="输入视频标题..." required="required "/><br><br>
+        类型：<input id="titleInput" name="type" type="text" required="required "/><br><br>
+        简介：<input id="typeInput" name="videoIntro" type="text" required="required "/><br><br>
+        图片：<input class="fileInput" name="imgFile" type="file" required="required "/><br>(只支持jpg,png格式)<br><br>
+        视频：<input class="fileInput" name="videoFile" type="file" required="required " id="videoFile"/><br>(只支持mp4,mkv格式)<br><br>
+        <input class="btn" id="submit" type="button" value="提交" onclick="doUpload()"/>
+        <input class="btn" type="reset" value="重置"/>
+    </form>
+
+    <div>
+        上传进度:
+        <div id="progressBar">
+            <div id="progressNumber">
+            </div>
+        </div>
+        <font id="percent">0%</font>
+        <div id="result"></div>
+    </div>
+    <span class="sid">1</span>
+    <span class="rid">2</span>
+    <input id="msg1" type="text"/>
+    <input id="msgBtn1" type="button" value="发送"/>
+    <br/>
+    <span class="sid">1</span>
+    <span class="rid">2</span>
+    <input id="msg2" type="text"/>
+    <input id="msgBtn2" type="button" value="发送"/>
+</div>
+
+<!--<video src="/videos/20180525094740089.mkv" controls="controls"></video>-->
+</body>
+<script src="js/test.js"></script>
+</html>

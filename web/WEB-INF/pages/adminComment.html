@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            $.ajax({
+                type: "POST",
+                url: "/Admin/getPendingComment",
+                contentType: "application/json",
+                dataType: "json",
+                async: true,
+                cache: false,
+                success: function (data) {
+                    var comment = data;
+                    addComment(comment);
+                },
+                error: function (json) {
+                    alert("获取待审核评论出错！");
+                }
+            });
+        });
+
+        function addComment(user) {
+            var table1 = "<tr>" + "<tr>\n" +
+                "<th>cid</th>\n" +
+                "<th>vid</th>\n" +
+                "<th>uid</th>\n" +
+                "<th>用户名</th>\n" +
+                "<th>内容</th>\n" +
+                "<th>通过评论</th>\n" +
+                "<th>禁止评论</th>\n" +
+                "</tr>";
+            $("#userInfo").append(table1);
+            for (var index = 0; index < user.length; index++) {
+                var cid = user[index].cid; //私信用户
+                var vid = user[index].vid;
+                var uid = user[index].uid;
+                var sUname = user[index].sUname;
+                var content = user[index].content;
+
+                var result = "<tr>" +
+                    "<td>" + cid + "</td>" +
+                    "<td>" + vid + "</td>" +
+                    "<td>" + uid + "</td>" +
+                    "<td>" + sUname + "</td>" +
+                    "<td>" + content + "</td>" +
+                    "<td><input name='" + cid + "' class='enableBtn' type=\"button\" value=\"√\"></td>" +
+                    "<td><input name='" + cid + "' class='disableBtn' type=\"button\" value=\"×\"></td>" + "</tr>";
+
+                $("#userInfo").append(result);
+            }
+        }
+
+        $(document).on("click", ".enableBtn", function () {
+            var cid = Number($(this).attr("name"));
+            $.ajax({
+                type: "POST",
+                url: "/Admin/passComment",
+                contentType: "application/json",
+                data: JSON.stringify({
+                    "cid": cid
+                }),
+                dataType: "json",
+                async: true,
+                cache: false,
+                success: function (data) {
+                    location.reload();
+                },
+                error: function (json) {
+                    alert("禁用用户出错！");
+                }
+            });
+        });
+        $(document).on("click", ".disableBtn", function () {
+            var cid = Number($(this).attr("name"));
+            $.ajax({
+                type: "POST",
+                url: "/Admin/unPassComment",
+                contentType: "application/json",
+                data: JSON.stringify({
+                    "cid": cid
+                }),
+                dataType: "json",
+                async: true,
+                cache: false,
+                success: function (data) {
+                    location.reload();
+                },
+                error: function (json) {
+                    alert("解除用户禁用出错！");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<table id="userInfo">
+</table>
+</body>
+</html>

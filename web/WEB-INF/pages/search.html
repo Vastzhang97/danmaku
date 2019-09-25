@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>无名小站╮(￣⊿￣)╭_搜索</title>
+    <link href="css/search.css" rel="stylesheet" type="text/css">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <div id="mainDiv">
+        <div id="headDiv-max" class="head-items">
+            <a href="/goToIndex" target="blank">
+                <div class="head-list-items head-list-items-first ">首&nbsp;页</div>
+            </a>
+            <a class="unlogin" href="/goToLogin" target="blank">
+                <div class="head-list-items head-list-items-second">登&nbsp;录</div>
+            </a>
+            <a class="unlogin" href="/goToRegister" target="blank">
+                <div class="head-list-items">注&nbsp;册</div>
+            </a>
+            <div class="head-list-items unlogin head-submit">投&nbsp;稿</div>
+
+            <div class="islogin">
+                <a href="/goToInfor" target="blank">
+                    <div class="head-list-items head-list-items-islogin">
+                        <img class="islogin-title" src="images/defaultHeadshot.jpg" />
+                    </div>
+                </a>
+                <a href="/goToMessage" target="blank">
+                    <div class="head-list-items head-list-items-msg">消息
+                        <div class="msg-tip">
+                            <img src="images/msg.gif" />
+                        </div>
+                    </div>
+                </a>
+                <a href="/goToInfor" target="blank">
+                    <div class="head-list-items">收藏夹</div>
+                </a>
+                <div class="head-list-items head-list-items-play nav">播放历史
+                    <div class="play-past nav">
+                        <div class="play-past-item play-past-more">查看更多>></div>
+                    </div>
+                </div>
+                <div class="head-list-items head-submit">投&nbsp;稿</div>
+            </div>
+        </div>
+        <div class="head-items head-items-mild">
+            <div class="head-title">╮(￣⊿￣)╭</div>
+            <div class="head-item-input head-item-input-max">
+                <select class="head-item-select">
+                    <option value="0">全部</option>
+                    <option value="1">动画</option>
+                    <option value="2">音乐</option>
+                    <option value="3">游戏</option>
+                    <option value="4">鬼畜</option>
+                    <option value="5">舞蹈</option>
+                    <option value="6">体育</option>
+                    <option value="7">科技</option>
+                </select>
+                <input type="text" id="searchInput" class="search-item" />
+                <input type="button" id="searchBtn" class="search-btn" value="搜索">
+            </div>
+        </div>
+        <div id="headDiv-min">
+            <div id="headList" class="head-items head-items-min">搜索</div>
+            <div id="headListDiv" class="head-list">
+                <a href="/goToIndex">
+                    <div class="head-items head-items-min">首页</div>
+                </a>
+                <a href="#">
+                    <div class="head-items head-items-min">动画</div>
+                </a>
+                <a href="#">
+                    <div class="head-items head-items-min">音乐</div>
+                </a>
+                <a href="#">
+                    <div class="head-items head-items-min">游戏</div>
+                </a>
+                <a href="#">
+                    <div class="head-items head-items-min">鬼畜</div>
+                </a>
+                <a href="#">
+                    <div class="head-items head-items-min">舞蹈</div>
+                </a>
+                <a href="#">
+                    <div class="head-items head-items-min">体育</div>
+                </a>
+                <a href="#">
+                    <div class="head-items head-items-min">科技</div>
+                </a>
+            </div>
+        </div>
+        <a href="/goToInfor">
+            <div class="min-user">
+                <img src="images/defaultHeadshot.jpg" />
+            </div>
+        </a>
+        <div class="search-items">
+            <div id="video-oType" class="head-items head-items-options head-items-options-min">
+                <div id="8" class="search-type search-type-unclick nav">最高人气</div>
+                <div id="9" class="search-type search-type-unclick nav">最新发布</div>
+                <div id="10" class="search-type search-type-unclick nav">最多播放</div>
+                <div id="11" class="search-type search-type-unclick nav">最多弹幕</div>
+            </div>
+            <div id="video-type" class="head-items head-items-options head-items-options-min">
+                <div id="0" class="search-type search-type-unclick nav">全部类型</div>
+                <div id="1" class="search-type search-type-unclick nav">动画</div>
+                <div id="2" class="search-type search-type-unclick nav">音乐</div>
+                <div id="3" class="search-type search-type-unclick nav">游戏</div>
+                <div id="4" class="search-type search-type-unclick nav">鬼畜</div>
+                <div id="5" class="search-type search-type-unclick nav">舞蹈</div>
+                <div id="6" class="search-type search-type-unclick nav">体育</div>
+                <div id="7" class="search-type search-type-unclick nav">科技</div>
+            </div>
+        </div>
+        <div class="search-result">
+            <!--<a href="#">-->
+                <!--<div class="area-item">-->
+                    <!--<img class="hot-image" src="images/1.jpg" />-->
+                    <!--<div class="hot-video-text">-->
+                        <!--<div class="hot-video-title">-->
+                            <!--<div class="video-infor-title">视频标题</div>-->
+                        <!--</div>-->
+                        <!--<div class="hot-video-type">-->
+                            <!--<div class="video-infor">-->
+                                <!--<div class="video-infor-logo">-->
+                                    <!--<img src="images/1.jpg" />-->
+                                <!--</div>-->
+                                <!--<div class="video-infor-item">-->
+                                    <!--55555-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="video-infor">-->
+                                <!--<div class="video-infor-logo">-->
+                                    <!--<img src="images/1.jpg" />-->
+                                <!--</div>-->
+                                <!--<div class="video-infor-item">-->
+                                    <!--56444-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="video-infor">-->
+                                <!--<div class="video-infor-logo">-->
+                                    <!--<img src="images/1.jpg" />-->
+                                <!--</div>-->
+                                <!--<div class="video-infor-item">-->
+                                    <!--11111-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</a>-->
+            <!--<a href="#">
+                <div class="area-item">
+                    <img class="hot-image" src="images/1.jpg" />
+                    <div class="hot-video-text">
+                        <div class="hot-video-title">
+                            <div class="video-infor-title">视频标题</div>
+                        </div>
+                        <div class="hot-video-type">
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    55555
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    56444
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    11111
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="area-item">
+                    <img class="hot-image" src="images/1.jpg" />
+                    <div class="hot-video-text">
+                        <div class="hot-video-title">
+                            <div class="video-infor-title">视频标题</div>
+                        </div>
+                        <div class="hot-video-type">
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    55555
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    56444
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    11111
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="area-item">
+                    <img class="hot-image" src="images/1.jpg" />
+                    <div class="hot-video-text">
+                        <div class="hot-video-title">
+                            <div class="video-infor-title">视频标题</div>
+                        </div>
+                        <div class="hot-video-type">
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    55555
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    56444
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    11111
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="area-item">
+                    <img class="hot-image" src="images/1.jpg" />
+                    <div class="hot-video-text">
+                        <div class="hot-video-title">
+                            <div class="video-infor-title">视频标题</div>
+                        </div>
+                        <div class="hot-video-type">
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    55555
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    56444
+                                </div>
+                            </div>
+                            <div class="video-infor">
+                                <div class="video-infor-logo">
+                                    <img src="images/1.jpg" />
+                                </div>
+                                <div class="video-infor-item">
+                                    11111
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>-->
+        </div>
+        <div class="search-bottom">
+            <div class="search-page">
+                <span class="first-page changePage nav">首页</span>
+                <span class="pervious-page changePage nav">上一页</span>
+                <div class="search-page-item changePage">
+                    <div class="present-page">1</div>
+                    <div>/</div>
+                    <div class="total-page">1</div>
+                </div>
+                <span class="next-page changePage nav">下一页</span>
+                <span class="last-page changePage nav">尾页</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/search.js"></script>
+
+</html>

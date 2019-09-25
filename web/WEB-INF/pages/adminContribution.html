@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .resourceShow{
+            width: 100%;
+            height: 200px;
+        }
+        .resource{
+            float: left;
+            width: 40%;
+            height: 100%;
+            display: none;
+        }
+        .resource img{
+            width: 100%;
+            height: 100%;
+        }
+        .resourceSrc{
+            color: deepskyblue;
+            cursor: pointer;
+        }
+    </style>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            $.ajax({
+                type: "POST",
+                url: "/Admin/getPendingContribution",
+                contentType: "application/json",
+                dataType: "json",
+                async: true,
+                cache: false,
+                success: function (data) {
+                    var contribution = data;
+                    addContribution(contribution);
+                },
+                error: function (json) {
+                    alert("获取所有用户出错！");
+                }
+            });
+        });
+        $(document).on("click",".resourceSrc",function () {
+            var id = $(this).attr("id");
+            var src = $(this).attr("name");
+            if(id == "coversrc"){
+                $(".cover").children().attr("src",src);
+                $(".cover").css("display","inline");
+            }else{
+                $(".video").attr("src",src);
+                $(".video").css("display","inline");
+            }
+        });
+
+        function addContribution(contribution) {
+            var table1 = "<tr>" + "<tr>\n" +
+                "<th>cid</th>\n" +
+                "<th>uid</th>\n" +
+                "<th>用户名</th>\n" +
+                "<th>时间</th>\n" +
+                "<th>分类</th>\n" +
+                "<th>封面</th>" +
+                "<th>视频</th>" +
+                "<th>简介</th>" +
+                "<th>视频时长</th>" +
+                "<th>通过审核</th>" +
+                "<th>不通过审核</th>" +
+                "</tr>";
+            $("#userInfo").append(table1);
+            for (var index = 0; index < contribution.length; index++) {
+                var cid = contribution[index].cid; //私信用户
+                var uid = contribution[index].uid;
+                var author = contribution[index].author;
+                var date = contribution[index].date;
+                var category = contribution[index].category;
+                var coversrc = contribution[index].coversrc;
+                var videosrc = contribution[index].videosrc;
+                var intro = contribution[index].intro;
+                var duration = contribution[index].duration;
+
+                if (category == 1) {
+                    category = "动画";
+                }
+                if (category == 2) {
+                    category = "音乐";
+                }
+                if (category == 3) {
+                    category = "游戏";
+                }
+                if (category == 4) {
+                    category = "鬼畜";
+                }
+                if (category == 5) {
+                    category = "舞蹈";
+                }
+                if (category == 6) {
+                    category = "体育";
+                }
+                if (category == 7) {
+                    category = "科技";
+                }
+
+                var result = "<tr>" +
+                    "<td>" + cid + "</td>" +
+                    "<td>" + uid + "</td>" +
+                    "<td>" + author + "</td>" +
+                    "<td>" + date + "</td>" +
+                    "<td>" + category + "</td>" +
+                    "<td><span id='coversrc' class='resourceSrc' name='" + coversrc + "'>查看封面</span>" + "</td>" +
+                    "<td><span id='videosrc' class='resourceSrc' name='" + videosrc + "'>查看视频</span>" + "</td>" +
+                    "<td>" + intro + "</td>" +
+                    "<td>" + duration + "</td>" +
+                    "<td><input name='" + cid + "' class='enableBtn' type=\"button\" value=\"√\"></td>" +
+                    "<td><input name='" + cid + "' class='disableBtn' type=\"button\" value=\"×\"></td>" + "</tr>";
+
+                $("#userInfo").append(result);
+            }
+        }
+
+        $(document).on("click", ".enableBtn", function () {
+            var cid = Number($(this).attr("name"));
+            $.ajax({
+                type: "POST",
+                url: "/Admin/passContribution",
+                contentType: "application/json",
+                data: JSON.stringify({
+                    "cid": cid
+                }),
+                dataType: "json",
+                async: true,
+                cache: false,
+                success: function (data) {
+                    location.reload();
+                },
+                error: function (json) {
+                    alert("通过审核出错！");
+                }
+            });
+        });
+        $(document).on("click", ".disableBtn", function () {
+            var cid = Number($(this).attr("name"));
+            $.ajax({
+                type: "POST",
+                url: "/Admin/unPassContribution",
+                contentType: "application/json",
+                data: JSON.stringify({
+                    "cid": cid
+                }),
+                dataType: "json",
+                async: true,
+                cache: false,
+                success: function (data) {
+                    location.reload();
+                },
+                error: function (json) {
+                    alert("不通过出错！");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<table id="userInfo">
+</table>
+<div class="resourceShow">
+    <div class="cover resource">
+        <img src="" alt="">
+    </div>
+    <video class="video resource" src=""  controls="controls">
+        您的浏览器不支持 video 标签。
+    </video>
+</div>
+</body>
+</html>

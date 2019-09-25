@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.niit.entity.ContributionEntity" table="contribution" schema="danmaku">
+        <id name="cid" column="cid"/>
+        <property name="uid" column="uid"/>
+        <property name="title" column="title"/>
+        <property name="date" column="date"/>
+        <property name="category" column="category"/>
+        <property name="coversrc" column="coversrc"/>
+        <property name="videosrc" column="videosrc"/>
+        <property name="intro" column="intro"/>
+        <property name="duration" column="duration"/>
+        <property name="status" column="status"/>
+    </class>
+</hibernate-mapping>

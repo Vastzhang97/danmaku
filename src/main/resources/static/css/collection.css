@@ -1,0 +1,117 @@
+.mainDiv{
+    width: 100%;
+    min-height: 520px;
+    /* border: 1px gainsboro solid; */
+    border-top: 0px;
+}
+.mainDivBg{
+    background: url("../images/404.png") no-repeat center;
+}
+a{
+    color: black;
+}
+.videoItem{
+    width: 100%;
+    height: 150px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 5px 5px gainsboro;
+}
+.video-headshot{
+    overflow: hidden;
+    border-radius: 10px;
+    float: left;
+    height: 100%;
+    width: 30%;
+}
+.video-headshot img{
+    width: 100%;
+    height: 100%;
+}
+.video-infor-detail{
+    float: left;
+    width: 60%;
+    height: 150px;
+}
+.video-status{
+    width: 10%;
+    height: 150px;
+    float: left;
+    text-align: center;
+    line-height: 150px;
+}
+.video-detail,.video-up,.video-title{
+    overflow: hidden;
+    width: 90%;
+    height: 50px;
+    padding-left: 5%;       
+    line-height: 50px;
+}
+.video-title{
+    font-size: 23px;
+}
+.video-detail{
+    font-size: 13px;
+    color: gray;
+}
+.video-infor{
+    height: 50px;
+    width: 25%;
+    float: left;
+}
+.video-infor-logo{
+    width: 40%;
+    height: 50px;
+    float: left;
+    line-height: 50px;
+}
+.video-infor-logo img{
+    width: 90%;
+    height: 70%;
+    margin-top: 15%;
+}
+.video-infor-item{
+    width: 60%;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+}
+
+@media screen and (max-width: 768px) {
+    .videoItem{
+        height: 90px;
+        line-height: 90px;
+    }
+    .video-infor-detail{
+        height: 30px;
+        width: 65%;
+    }
+    .video-detail,.video-up,.video-title{
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+    }
+    .video-detail{
+        font-size: 8px;
+        color: gray;
+    }
+    .video-infor-logo{
+        width: 40%;
+        height: 30px;
+        float: left;
+        line-height: 30px;
+    }
+    .video-infor-item{
+        width: 60%;
+        height: 30px;
+        line-height: 30px;
+        float: left;
+    }
+    .video-infor-date{
+        display: none;
+    }
+    .video-infor{
+        width: 33%;
+    }
+
+}

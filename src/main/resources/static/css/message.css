@@ -1,0 +1,7 @@
+.content-item{
+    background: url("../images/bg.jpg") no-repeat;
+    background-size:contain;
+}
+.left-item{
+    box-shadow: 5px 5px 5px white;
+}

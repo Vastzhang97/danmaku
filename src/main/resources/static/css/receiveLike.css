@@ -1,0 +1,82 @@
+.mainDiv{
+    width: 100%;
+    min-height: 520px;
+    height: auto;
+    opacity: 0.8;
+    font-family: YouYuan;
+}
+.mainDivBg{
+    background: url("../images/404.png") no-repeat center;
+}
+a{
+    color: black;
+}
+.nav{
+    /*鼠标变手*/
+    cursor: pointer;
+}
+.receiveLike{
+    margin: 0 auto;
+    width: 90%;
+    min-height: 120px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px gainsboro solid; 
+}
+.receiveLike-logo{
+    float: left;
+    margin-top: 30px;
+    margin-left: 2%;
+    width: 60px;
+    height:60px;
+    border-radius: 30px;
+    overflow: hidden;
+    
+}
+.receiveLike-logo img{
+    width: 100%;
+    height: 100%;
+}
+.receiveLike-detail{
+    float: left;
+    margin-left: 2%;
+    width: 85%;
+    height: 100px;
+    margin-top: 10px;
+}
+.receiveLike-title{
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px gainsboro solid; 
+}
+.receiveLike-content{
+    width: 100%;
+    height: 40px;
+    color: #1E90FF;
+    overflow: hidden;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.receiveLike-title div{
+    width: auto;
+    line-height: 40px;
+    height: 40px;
+    float: left;
+    margin-right: 2%;
+}
+.receiveLike-name,.receiveLike-item{
+    font-size: 20px;
+    font-weight: bold;
+}
+.receiveLike-text{
+    color:#3C3C3C;
+}
+.receiveLike-date{
+    margin-left: 2%;
+    font-size: 14px;
+    color: grey;
+}

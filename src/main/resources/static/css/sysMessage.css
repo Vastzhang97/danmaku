@@ -1,0 +1,56 @@
+.mainDiv{
+    width: 100%;
+    height: auto;
+    min-height: 520px;
+    opacity: 0.8;
+    font-family: YouYuan;
+}
+.mainDivBg{
+    background: url("../images/404.png") no-repeat center;
+}
+a{
+    color: black;
+}
+.nav{
+    /*鼠标变手*/
+    cursor: pointer;
+}
+.sysMsg{
+    margin: 0 auto;
+    width: 90%;
+    min-height: 120px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px gainsboro solid; 
+}
+.sysMsg-head{
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 90%;
+    height: 30px;
+    border-bottom: 1px gainsboro solid; 
+}
+.sysMsg-head div{
+    float: left;
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+}
+.sysMsg-title{
+    font-weight: bold;
+}
+.sysMsg-date{
+    margin-left: 2%;
+    font-size: 12px;
+    color: grey;
+}
+
+.sysMsg-content{
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+    color:#3C3C3C;
+    font-size: 15px;
+}

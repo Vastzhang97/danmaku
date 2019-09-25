@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>无名小站╮(￣⊿￣)╭_个人中心</title>
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link href="css/infor.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="mainDiv">
+        <div class="title-item">
+            <span>个人中心</span>
+            <a class="admin" href="/goToAdmin">进入管理员页面></a>
+        </div>
+        <div id="headDiv-max" class="head-items">
+            <a href="/goToIndex" target="_blank">
+                <div class="head-list-items head-list-items-first ">首&nbsp;页</div>
+            </a>
+            <!-- <div class="head-list-items ">列表2</div>
+            <div class="head-list-items ">列表3</div>
+            <div class="head-list-items">列表4</div> -->
+            <a class="unlogin" href="/goToLogin" target="_blank">
+                <div class="head-list-items head-list-items-second">登&nbsp;录</div>
+            </a>
+            <a class="unlogin" href="/goToRegister" target="_blank">
+                <div class="head-list-items">注&nbsp;册</div>
+            </a>
+            <div class="head-list-items unlogin head-submit">投&nbsp;稿</div>
+
+            <div class="islogin">
+                <a href="/goToInfor" target="_blank">
+                    <div class="head-list-items head-list-items-islogin">
+                        <img class="islogin-title" src="images/defaultHeadshot.jpg" />
+                    </div>
+                </a>
+                <a href="/goToMessage" target="_blank">
+                    <div class="head-list-items head-list-items-msg">消息
+                        <div class="msg-tip">
+                            <img src="images/msg.gif" />
+                        </div>
+                    </div>
+                </a>
+                <a href="/goToInfor" target="_blank">
+                    <div class="head-list-items">收藏夹</div>
+                </a>
+                <div class="head-list-items head-list-items-play nav">播放历史
+                    <div id="playPast" class="play-past nav">
+                        <div class="play-past-item play-past-more">查看更多>></div>
+                    </div>
+                </div>
+                <div class="head-list-items head-submit">投&nbsp;稿</div>
+            </div>
+        </div>
+        <div class="content-item">
+            <div class="left-item">
+                <div id="infor-nav-first" class="infor-item">
+                    <div class="infor-item-content">我的信息</div>
+                </div>
+                <div id="infor-nav-second" class="infor-item">
+                    <div class="infor-item-content">我的视频</div>
+                </div>
+                <div id="infor-nav-third" class="infor-item">
+                    <div class="infor-item-content">我的收藏</div>
+                </div>
+                <div id="infor-nav-fourth" class="infor-item">
+                    <div class="infor-item-content">我的投稿</div>
+                </div>
+                <div id="infor-nav-fifth" class="infor-item">
+                    <div class="infor-item-content">账号登出</div>
+                </div>
+            </div>
+            <div class="right-item">
+                <iframe id="infor-iframe" src="/goToPerson" width="100%" height="100%" frameborder="0" scrolling="yes"></iframe>
+            </div>
+        </div>
+        <div id="headDiv-min">
+            <div id="headList" class="head-items head-items-min">我的信息</div>
+            <div id="headListDiv" class="head-list">
+                <a href="/goToIndex">
+                    <div class="head-items head-items-min">首页</div>
+                </a>
+                <a href="#">
+                    <div class="head-items head-items-min">动画</div>
+                </a>
+                <a href="#">
+                    <div class="head-items head-items-min">音乐</div>
+                </a>
+                <a href="#">
+                    <div class="head-items head-items-min">游戏</div>
+                </a>
+                <a href="#">
+                    <div class="head-items head-items-min">鬼畜</div>
+                </a>
+                <a href="#">
+                    <div class="head-items head-items-min">舞蹈</div>
+                </a>
+                <a href="#">
+                    <div class="head-items head-items-min">体育</div>
+                </a>
+                <a href="#">
+                    <div class="head-items head-items-min">科技</div>
+                </a>
+            </div>
+            <div class="nav-min">
+                <img class="nav-img" src="images/defaultHeadshot.jpg" />
+            </div>
+        </div>
+        <div class="left-item-min">
+            <div id="infor-nav-first-min" class="infor-item">
+                <div class="infor-item-content">我的信息</div>
+            </div>
+            <div id="infor-nav-second-min" class="infor-item">
+                <div class="infor-item-content">我的视频</div>
+            </div>
+            <div id="infor-nav-third-min" class="infor-item">
+                <div class="infor-item-content">我的收藏</div>
+            </div>
+            <div id="infor-nav-fourth-min" class="infor-item">
+                <div class="infor-item-content">我的投稿</div>
+            </div>
+            <div id="infor-nav-fifth-min" class="infor-item">
+                <div class="infor-item-content">账号登出</div>
+            </div>
+        </div>
+        <div class="video-bottom"></div>
+    </div>
+</body>
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/infor.js"></script>
+<script src="js/index.js"></script>
+</html>

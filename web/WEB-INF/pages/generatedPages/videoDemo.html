@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>视频页面</title>
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link href="css/video.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="mainDiv">
+    <div id="headDiv-max" class="head-items">
+        <a href="/goToIndex">
+            <div class="head-list-items head-list-items-first nav">首&nbsp;页</div>
+        </a>
+        <a class="unlogin" href="/goToLogin" target="_blank">
+            <div class="head-list-items head-list-items-second">登&nbsp;录</div>
+        </a>
+        <a class="unlogin" href="/goToRegister" target="_blank">
+            <div class="head-list-items">注&nbsp;册</div>
+        </a>
+        <div class="head-list-items unlogin head-submit">投&nbsp;稿</div>
+
+        <div class="islogin">
+            <a href="/goToInfor" target="_blank">
+                <div class="head-list-items head-list-items-islogin">
+                    <img class="islogin-title" src="images/defaultHeadshot"/>
+                </div>
+            </a>
+            <a href="/goToMessage" target="_blank">
+                <div class="head-list-items head-list-items-msg">消息
+                    <div class="msg-tip">
+                        <img src="images/msg.png"/>
+                    </div>
+                </div>
+            </a>
+            <a href="/goToInfor" target="_blank">
+                <div class="head-list-items">收藏夹</div>
+            </a>
+            <div class="head-list-items head-list-items-play nav">播放历史
+                <div class="play-past nav">
+                    <!--<div class="play-past-item">-->
+                    <!--<div class="play-past-title">视频标题</div>-->
+                    <!--<div class="play-past-date">时间</div>-->
+                    <!--</div>-->
+                    <!--<div class="play-past-item">-->
+                    <!--<div class="play-past-title">视频标题</div>-->
+                    <!--<div class="play-past-date">时间</div>-->
+                    <!--</div>-->
+                    <div class="play-past-item play-past-more">查看更多>></div>
+                </div>
+            </div>
+            <div class="head-list-items head-submit">投&nbsp;稿</div>
+        </div>
+    </div>
+    <div class="head-items head-items-mild">
+        <div class="head-title">╮(￣⊿￣)╭</div>
+        <div class="head-item-input head-item-input-max">
+            <select class="head-item-select">
+                <option value="0">全部</option>
+                <option value="1">动画</option>
+                <option value="2">音乐</option>
+                <option value="3">游戏</option>
+                <option value="4">鬼畜</option>
+                <option value="5">舞蹈</option>
+                <option value="6">体育</option>
+                <option value="7">科技</option>
+            </select>
+            <input type="text" id="searchInput" class="search-item"/>
+            <input type="button" id="searchBtn" class="search-btn nav" value="搜索">
+        </div>
+    </div>
+    <div class="head-items head-items-options head-items-options-min">
+        <div name="1" class="head-options head-options-first">动&nbsp;画</div>
+        <div name="2" class="head-options nav">音&nbsp;乐</div>
+        <div name="3" class="head-options nav">游&nbsp;戏</div>
+        <div name="4" class="head-options nav">鬼&nbsp;畜</div>
+        <div name="5" class="head-options nav">舞&nbsp;蹈</div>
+        <div name="6" class="head-options nav">体&nbsp;育</div>
+        <div name="7" class="head-options nav">科&nbsp;技</div>
+    </div>
+    <div id="headDiv-min">
+        <div id="headList" class="head-items head-items-min">视频</div>
+        <div id="headListDiv" class="head-list">
+            <a href="/goToIndex">
+                <div class="head-items head-items-min">首页</div>
+            </a>
+            <a href="#">
+                <div class="head-items head-items-min">动画</div>
+            </a>
+            <a href="#">
+                <div class="head-items head-items-min">音乐</div>
+            </a>
+            <a href="#">
+                <div class="head-items head-items-min">游戏</div>
+            </a>
+            <a href="#">
+                <div class="head-items head-items-min">鬼畜</div>
+            </a>
+            <a href="#">
+                <div class="head-items head-items-min">舞蹈</div>
+            </a>
+            <a href="#">
+                <div class="head-items head-items-min">体育</div>
+            </a>
+            <a href="#">
+                <div class="head-items head-items-min">科技</div>
+            </a>
+        </div>
+    </div>
+    <a href="/goToIndex">
+        <div class="min-user">
+            <img src="images/2.jpg"/>
+        </div>
+    </a>
+    <div class="infor-div">
+        <div class="video-main-infor">
+            <div class="video-title">
+                <div class="title">视频标题233333</div>
+            </div>
+            <div class="video-detail">
+                <div class="video-infor">
+                    <div class="video-infor-logo">
+                        <img src="images/view.png"/>
+                    </div>
+                    <div class="view video-infor-item">
+
+                    </div>
+                </div>
+                <div class="video-infor">
+                    <div class="video-infor-logo">
+                        <img src="images/danmaku.png"/>
+                    </div>
+                    <div class="danmakunum video-infor-item">
+
+                    </div>
+                </div>
+                <div class="video-infor">
+                    <div class="video-infor-logo">
+                        <img src="images/duration.png"/>
+                    </div>
+                    <div class="duration video-infor-item">
+
+                    </div>
+                </div>
+                <div class="video-infor video-infor-date">
+                    <div class="video-infor-logo">
+                        <img src="images/date.png"/>
+                    </div>
+                    <div class="date video-infor-item">
+
+                    </div>
+                </div>
+            </div>
+            <div class="video-like-collect">
+                <!--<input type="button" class="video-like video-btn nav" value="点赞">-->
+                <img class="video-like video-btn nav" src="images/like1.png" alt="点赞">
+                <!--<input type="button" class="video-collect video-btn nav" value="收藏">-->
+                <img class="video-collect video-btn nav" src="images/collection1.png" alt="收藏">
+            </div>
+        </div>
+        <div class="up-infor">
+            <div class="up-datil">
+                <div class="up-headshot">
+                    <img class="upheadshot" src="images/3.jpg"/>
+                </div>
+            </div>
+            <div class="up-datil up-name">
+                admin
+            </div>
+            <div class="up-datil">
+                <input type="button" id="attentionBtn" class="attentionBtn up-attention nav" value="关注">
+            </div>
+        </div>
+    </div>
+    <div class="video-item">
+        <div class="video-play">
+            <div class="video-div">
+                <!--<div class="danmu">23333</div>-->
+                <video id="video" src="videos/az.mkv" controls="controls" ontimeupdate="videoTimeUpdate(this)"
+                       onseeking="videoSeeking(this)"
+                       onseeked="videoSeeked()">您的浏览器不支持 video 标签。
+                </video>
+                <div name="1" class="video-changeScreen">
+                    <img class="video-changeScreen-img" src="images/fullScreen.png"/>
+                </div>
+            </div>
+            <div class="danmaku-submit">
+                <div class="danmaku-type">
+                    <div class="danmaku-type-detail">
+                        <select name="danmakuPosition" id="danmakuPosition">
+                            <option value="1" selected>滚动</option>
+                            <option value="2">顶部</option>
+                            <option value="3">底部</option>
+                        </select>
+                    </div>
+                    <div class="danmaku-type-detail">
+                        <select name="danmakuColor" id="danmakuColor">
+                            <option value="1" selected>白色</option>
+                            <option value="2">红色</option>
+                            <option value="3">绿色</option>
+                            <option value="4">蓝色</option>
+                            <option value="5">黄色</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="danmaku-input">
+                    <input type="text" id="danmakuInput" placeholder="输入想要发送的弹幕..."/>
+                </div>
+                <div class="danmaku-btn">
+                    <input type="button" id="danmakuBtn" class="nav" value="发送>">
+                </div>
+            </div>
+        </div>
+        <div class="video-danmaku">
+            <div class="video-danmaku-top">
+                <div class="video-danmaku-list video-danmaku-item nav">
+                    弹幕列表
+                </div>
+                <div class="video-danmaku-shield video-danmaku-item nav">
+                    弹幕屏蔽
+                </div>
+            </div>
+            <div class="danmaku-list video-danmaku-bottom">
+                <div class="danmaku-attribute">
+                    <div class="danmaku-attribute-detail danmaku-attribute-time">
+                        &nbsp;时间
+                    </div>
+                    <div class="danmaku-attribute-detail danmaku-attribute-content">
+                        &nbsp;弹幕内容
+                    </div>
+                    <div class="danmaku-attribute-detail danmaku-attribute-date">
+                        &nbsp;发送时间
+                    </div>
+                </div>
+                <div class="danmaku-items">
+
+                </div>
+            </div>
+            <div class="video-more">
+                查看历史弹幕>
+            </div>
+            <div class="danmaku-shield video-danmaku-bottom"></div>
+        </div>
+    </div>
+    <div class="video-intro">
+        <div class="video-intro-title">
+            <div>视频简介</div>
+        </div>
+        <div class="video-intro-content">
+        </div>
+    </div>
+    <div class="video-comment-div">
+        <div class="video-comment-title video-intro-title">
+            <div>发布评论</div>
+        </div>
+        <div class="video-comment-submit">
+            <div class="headShot-div">
+                <div class="headShot">
+                    <img id="UheadShot" class="nav" src="images/2.jpg"/>
+                </div>
+            </div>
+            <div class="video-comment-content">
+                <textarea class="videoComment" name="videoComment"></textarea>
+            </div>
+            <div class="video-comment-btn">
+                <input type="button" class="videoCommentBtn nav" value="发布评论">
+            </div>
+        </div>
+        <div class="video-comment-title video-intro-title">
+            <div>热门评论</div>
+        </div>
+        <div class="video-comment">
+            <!-- <div class="video-comment-item">
+                <div class="headShot-div">
+                    <div class="headShot">
+                        <img id="headShot" class="headShot-send nav" src="images/2.jpg" />
+                    </div>
+                    <div class="attention">
+                        <input type="button" class="up-attention nav" value="关注">
+                    </div>
+                </div>
+                <div class="comment-item">
+                    <div class="comment-detail comment-uname">
+                        Yozora
+                    </div>
+                    <div class="comment-detail comment-content">
+                        waasssssssssssssssssssssssssssss
+                    </div>
+                    <div class="comment-detail comment-date">
+                        <div class="date-content">
+                            2018-5-22 12:21
+                        </div>
+                        <div class="comment-like">
+                            <input type="button" class="commentLikeBtn nav" value="点赞">
+                            <span class="comment-like-num">
+                                532
+                            </span>
+                        </div>
+                        <div class="comment-inform">
+                            <input type="button" class="commentInformBtn nav" value="举报">
+                        </div>
+                        <div class="comment-reply">
+                            <input type="button" class="commentReplymBtn nav" value="回复">
+                        </div>
+                    </div>
+                    <div class="comment-reply-item video-comment-item">
+                        <div class="headShot-div headShot-div-reply">
+                            <div class="headShot headShot-reply">
+                                <img id="headShot" class="nav" src="images/2.jpg" />
+                            </div>
+                        </div>
+                        <div class="comment-item comment-item-reply">
+                            <div class="comment-detail comment-uname comment-uname-reply">
+                                Yozora
+                            </div>
+                            <div class="comment-detail comment-content comment-content-reply">
+                                waasssssssssssssssssssssssssssss
+                            </div>
+                            <div class="comment-detail comment-date comment-date-reply">
+                                <div class="date-content">
+                                    2018-12-22 12:12
+                                </div>
+                                <div class="comment-like">
+                                    <input type="button" class="commentLikeBtn nav" value="点赞">
+                                    <span class="comment-like-num">
+                                                532
+                                            </span>
+                                </div>
+                                <div class="comment-inform">
+                                    <input type="button" class="commentInformBtn nav" value="举报">
+                                </div>
+                                <div class="comment-reply">
+                                    <input type="button" class="commentReplymBtn nav" value="回复">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="video-comment-submit video-comment-submit-reply video-comment-submit-reply-hind">
+                    <div class="headShot-div">
+                        <div class="headShot headShot-submit-reply">
+                            <img id="UheadShot" class="nav" src="images/2.jpg" />
+                        </div>
+                    </div>
+                    <div class="video-comment-content">
+                        <textarea id="replyComment" name="videoComment"></textarea>
+                    </div>
+                    <div class="video-comment-btn">
+                        <input type="button" class="commentBtn nav" value="发布评论">
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="video-comment-item">
+                <div class="headShot-div">
+                    <div class="headShot">
+                        <img id="headShot" class="nav" src="images/2.jpg" />
+                    </div>
+                    <div class="attention">
+                        <input type="button" class="attentionBtn up-attention nav" value="关注">
+                    </div>
+                </div>
+                <div class="comment-item">
+                    <div class="comment-detail comment-uname">
+                        Yozora
+                    </div>
+                    <div class="comment-detail comment-content">
+                        waasssssssssssssssssssssssssssss
+                    </div>
+                    <div class="comment-detail comment-date">
+                        <div class="date-content">
+                            2018-5-22
+                        </div>
+                        <div class="comment-like">
+                            <input type="button" class="commentLikeBtn nav" value="点赞">
+                            <span class="comment-like-num">
+                                532
+                            </span>
+                        </div>
+                        <div class="comment-inform">
+                            <input type="button" class="commentInformBtn nav" value="举报">
+                        </div>
+                        <div class="comment-reply">
+                            <input type="button" class="commentReplymBtn nav" value="回复">
+                        </div>
+                    </div>
+                </div>
+                <div class="video-comment-submit video-comment-submit-reply">
+                    <div class="headShot-div">
+                        <div class="headShot headShot-submit-reply">
+                            <img id="headShot" class="nav" src="images/2.jpg" />
+                        </div>
+                    </div>
+                    <div class="video-comment-content">
+                        <textarea id="replyComment" name="replyComment"></textarea>
+                    </div>
+                    <div class="video-comment-btn">
+                        <input type="button" class="commentBtn nav" value="发布评论">
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <div class="video-bottom"></div>
+    <div id="fixedList" class="fixed-list">
+        <div class="fixed-list-items" onclick="goTop()">
+            <img class="fixed-image" src="images/goToTop.png"/>
+        </div>
+    </div>
+</div>
+<div id="videoDemonId">1</div>
+</body>
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/video.js"></script>
+</html>

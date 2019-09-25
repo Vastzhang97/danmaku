@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            $.ajax({
+                type: "POST",
+                url: "/Admin/getAllUser",
+                contentType: "application/json",
+                dataType: "json",
+                async: true,
+                cache: false,
+                success: function (data) {
+                    var user = data;
+                    addUser(user);
+                },
+                error: function (json) {
+                    alert("获取所有用户出错！");
+                }
+            });
+        });
+
+        function addUser(user) {
+            var table1 = "<tr>" + "<tr>\n" +
+                "<th>uid</th>\n" +
+                "<th>username</th>\n" +
+                "<th>password</th>\n" +
+                "<th>level</th>\n" +
+                "<th>privilege</th>\n" +
+                "<th>status</th>\n" +
+                "<th>解除禁止</th>" +
+                "<th>禁止用户</th>" +
+                "</tr>";
+            $("#userInfo").append(table1);
+            for (var index = 0; index < user.length; index++) {
+                var uid = user[index].uid; //私信用户
+                var username = user[index].uname;
+                var password = user[index].password;
+                var level = user[index].level;
+                var privilege = user[index].privilege;
+                var status = user[index].status;
+                if (status == 0) {
+                    status = "正常";
+                }
+                if (status == 1) {
+                    status = "禁用";
+                }
+                if (privilege == 1) {
+                    privilege = "用户";
+                }
+                if (privilege == 0) {
+                    privilege = "管理员";
+                }
+
+                var result = "<tr>" +
+                    "<td>" + uid + "</td>" +
+                    "<td>" + username + "</td>" +
+                    "<td>" + password + "</td>" +
+                    "<td>" + level + "</td>" +
+                    "<td>" + privilege + "</td>" +
+                    "<td>" + status + "</td>" +
+                    "<td><input name='" + uid + "' class='enableBtn' type=\"button\" value=\"√\"></td>" +
+                    "<td><input name='" + uid + "' class='disableBtn' type=\"button\" value=\"×\"></td>" + "</tr>";
+
+                $("#userInfo").append(result);
+            }
+        }
+
+        $(document).on("click", ".enableBtn", function () {
+            var uid = Number($(this).attr("name"));
+            $.ajax({
+                type: "POST",
+                url: "/Admin/enableUser",
+                contentType: "application/json",
+                data: JSON.stringify({
+                    "uid": uid
+                }),
+                dataType: "json",
+                async: true,
+                cache: false,
+                success: function (data) {
+                    location.reload();
+                },
+                error: function (json) {
+                    alert("禁用用户出错！");
+                }
+            });
+        });
+        $(document).on("click", ".disableBtn", function () {
+            var uid = Number($(this).attr("name"));
+            $.ajax({
+                type: "POST",
+                url: "/Admin/disableUser",
+                contentType: "application/json",
+                data: JSON.stringify({
+                    "uid": uid
+                }),
+                dataType: "json",
+                async: true,
+                cache: false,
+                success: function (data) {
+                    location.reload();
+                },
+                error: function (json) {
+                    alert("解除用户禁用出错！");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<table id="userInfo">
+</table>
+</body>
+</html>

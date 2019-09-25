@@ -1,0 +1,107 @@
+/* 搜索类型 */
+.search-items{
+    /*border: 1px black solid;*/
+    margin-top: 10px;
+    width: 100%;
+    float: left;
+    height: auto;
+}
+#video-oType{
+    box-shadow: 5px 5px 5px gainsboro;
+}
+#video-type{
+    box-shadow: 5px 5px 5px gainsboro;
+}
+.search-type{
+    border-radius: 5px;
+    line-height: 30px;
+    width: 8%;
+    height: 30px;
+    font-size: 15px;
+    margin-right: 2%;
+    background-color: lavender;
+    /* border: 1px black solid; */
+}
+.search-type-unclick{
+    background-color: white;
+    color: black;
+}
+.search-type-click{
+    background-color: dodgerblue;
+    color: white;
+}
+.search-type:hover{
+    color: blue;
+}
+.search-type-all{
+    margin-left: 1%;
+    background-color: dodgerblue;
+    color: white;
+}
+
+/* 搜索结果框 */
+.search-result{
+    float: left;
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding-bottom: 20px;
+    box-shadow: 5px 5px 5px gainsboro;
+    /*border: 1px black solid;*/
+}
+.search-video{
+    width: 22%;
+    margin-left:2.2%; 
+    margin-top: 1%;
+    height: 200px;
+    float: left;
+    /*border: 0.5px black solid;*/
+}
+.search-bottom{
+    margin-top: 30px;
+    width: 100%;
+    height: 200px;
+    float: left;
+    background-color: whitesmoke;
+}
+.search-page{
+    float: left;
+    margin-left: 30%;
+    margin-top: 10px;
+    width: 40%;
+    height: 50px;
+}
+.search-page div,span{
+    float: left;
+}
+.search-page-item{
+    width: 15%;
+    height: 100%;
+    /*background-color: blue;*/
+}
+.present-page,.total-page{
+    width: 43%;
+    height: 100%;
+}
+.present-page{
+    text-align: right;
+}
+.changePage{
+    margin-left: 8%;
+}
+.changePage:hover{
+    color: royalblue;
+}
+@media screen and (max-width: 768px){
+    .search-page{
+        margin-left: 0;
+        width: 100%;
+    }
+    .changePage{
+        margin-left: 5%;
+    }
+    .search-page-item{
+        width: 20%;
+    }
+}

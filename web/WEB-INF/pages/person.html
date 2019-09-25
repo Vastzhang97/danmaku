@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>个人信息</title>
+    <link href="css/person.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="mainDiv">
+    <div class="infor-item left-div">
+        <div class="headShot-title">用户头像:</div>
+        <div class="headShot-item">
+            <div class="headShot">
+                <div class="changeHeadShotHint nav">更换头像</div>
+                <img id="changeHeadShot" class="nav" src=""/>
+            </div>
+        </div>
+        <div class="headShot-item alter-btn">
+            <input type="button" id="headShotBtn" class="infor-btn nav" value="保存头像">
+            <input type="file" id="file" name="file" style="display:none;" onchange="filechange(event)">
+        </div>
+    </div>
+    <div class="infor-item right-div">
+        <div class="infor-detal">
+            <div class="infor-span">用户名：</div>
+            <div class="infor-content">
+                <input type="text" id="uname" name="uname">
+            </div>
+        </div>
+        <div class="infor-detal">
+            <div class="infor-span">密码：</div>
+            <div class="infor-content">
+                <input type="text" id="password" name="password">
+            </div>
+        </div>
+        <div class="infor-detal">
+            <div class="infor-span">身份证验证：</div>
+            <div class="infor-content">
+                <input type="text" id="identify" name="identify" onblur="verifyIdentify(this)">
+            </div>
+        </div>
+        <div class="infor-detal">
+            <div class="infor-span">等级：</div>
+            <div class="infor-content" id="level">
+                平民
+            </div>
+        </div>
+        <div class="infor-detal btn-detal">
+            <input type="button" id="inforBtn" class="infor-btn nav" value="保存信息">
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="/js/ajaxfileupload.js"></script>
+<script src="js/person.js"></script>
+
+</html>

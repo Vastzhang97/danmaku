@@ -1,0 +1,864 @@
+body {
+    background-color: whitesmoke;
+    font-family: YouYuan;
+}
+
+#mainDiv {
+    position: relative;
+}
+
+#headDiv-max {
+    background-color: #DAD9DA;
+}
+
+/* 视频信息 */
+.infor-div {
+    float: left;
+    margin-top: 10px;
+    width: 100%;
+    height: 100px;
+    border: 1px gainsboro solid;
+    box-shadow: 5px 5px 5px gainsboro;
+}
+
+.video-main-infor {
+    float: left;
+    width: 60%;
+    height: 100%;
+    background-color: white
+}
+
+.video-title {
+    font-size: 25px;
+    width: 100%;
+    height: 60%;
+    display: table;
+    padding-left: 1%;
+    /* border: 1px black solid; */
+}
+
+.video-title div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.video-detail {
+    overflow: hidden;
+    display: table;
+    float: left;
+    margin-left: 1%;
+    width: 70%;
+    height: 40%;
+    /* border: 1px black solid; */
+}
+
+.video-like-collect {
+    overflow: hidden;
+    display: table;
+    float: left;
+    width: 20%;
+    height: 40%;
+}
+
+.video-btn {
+    margin-top: 2%;
+    float: left;
+    width: 20%;
+    height: 80%;
+}
+
+.video-collect {
+    margin-left: 30%;
+}
+
+.video-infor {
+    width: 23%;
+}
+
+.video-infor-item {
+    padding-left: 2%;
+}
+
+.video-infor-logo img {
+    width: 80%;
+}
+
+/* up信息 */
+.up-infor {
+    float: left;
+    width: 40%;
+    height: 100%;
+    background-color: white;
+}
+
+.up-datil {
+    text-align: center;
+    display: table;
+    float: left;
+    width: 33%;
+    height: 100px;
+    /* border: 0.3px black solid; */
+}
+
+.up-headshot {
+    margin: 0 auto;
+    margin-top: 10px;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    /* border: 0.3px black solid; */
+}
+
+.up-headshot img {
+    width: 100%;
+    height: 100%;
+}
+
+.up-name {
+    text-align: left;
+    padding-left: 0px;
+    font-size: 22px;
+    line-height: 100px;
+}
+
+/* 关注up */
+.up-attention {
+    width: 90px;
+    height: 30px;
+    margin-top: 35px;
+    border-radius: 5px;
+    background-color: deepskyblue;
+    color: white;
+    border: 1px white solid;
+}
+
+/* 视屏播放 */
+.video-item {
+    float: left;
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    box-shadow: 5px 5px 5px gainsboro;
+    background: gainsboro;
+    /* border: 0.3px black solid; */
+}
+
+.video-play {
+    float: left;
+    width: 65%;
+    height: 600px;
+    /* border: 0.3px black solid; */
+}
+
+.video-danmaku {
+    position: relative;
+    float: left;
+    margin-left: 1%;
+    width: 33.83%;
+    height: 600px;
+    background-color: white;
+    border: 1px gainsboro solid;
+}
+
+.video-div {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background-color: black;
+}
+
+.video-div-fullScreen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+    top: 0px;
+    left: 0px;
+}
+
+.video-changeScreen {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    height: 40px;
+    width: 40px;
+}
+
+.video-changeScreen img {
+    width: 40%;
+    height: 40%;
+    margin: 30% 22%;
+}
+
+.video-div video {
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.danmu {
+    position: absolute;
+    font-size: 20px;
+    width: auto;
+    min-width: 150px;
+    max-width: 400px;
+    height: 30px;
+    left: 100%;
+    line-height: 30px;
+    overflow: hidden;
+    color: white;
+    /*border: 1px white solid;*/
+}
+
+.danmaku-submit {
+    width: 100%;
+    height: 100px;
+    border: 0.1px gainsboro solid;
+    background-color: white;
+}
+
+.danmaku-type {
+    float: left;
+    width: 20%;
+    height: 100%;
+    /* border-right: 0.1px grey solid; */
+}
+
+.danmaku-input {
+    text-align: center;
+    line-height: 100px;
+    float: left;
+    width: 60%;
+    height: 100%;
+    /* border-right: 0.1px grey solid; */
+}
+
+.danmaku-btn {
+    float: left;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    line-height: 100px;
+}
+
+.danmaku-type-detail {
+    float: left;
+    width: 50%;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+
+.danmaku-type select {
+    height: 30px;
+}
+
+.danmaku-input input {
+    width: 90%;
+    height: 30px;
+}
+
+.danmaku-btn input {
+    background-color: deepskyblue;
+    color: white;
+    border-radius: 10px;
+    width: 80px;
+    height: 35px;
+    border: 1px white solid;
+}
+
+/* 弹幕列表 */
+.video-danmaku-top {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px gainsboro solid;
+}
+
+.video-danmaku-item {
+    float: left;
+    width: 50%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.video-danmaku-item:hover {
+    color: deepskyblue;
+    border-bottom: 1px deepskyblue solid;
+}
+
+.video-danmaku-bottom {
+    width: 100%;
+    height: 500px;
+}
+
+.danmaku-list {
+    position: absolute;
+    display: inline;
+    /* background-color: pink; */
+}
+
+.danmaku-shield {
+    position: absolute;
+    display: none;
+    background-color: wheat;
+}
+
+.danmaku-attribute {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px gainsboro solid;
+}
+
+.danmaku-attribute-detail {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    font-size: 13px;
+    color: grey;
+}
+
+.danmaku-attribute-time {
+    width: 15%;
+}
+
+.danmaku-attribute-content {
+    width: 65%;
+    /* background-color: white; */
+}
+
+.danmaku-attribute-date {
+    width: 20%;
+}
+
+.danmaku-items {
+    height: 470px;
+    width: 100%;
+    margin-top: 30px;
+    overflow: auto;
+}
+
+.danmaku-div {
+    width: 100%;
+    height: 40px;
+}
+
+.danmaku {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+    color: grey;
+    cursor: pointer;
+}
+
+.danmakuHind {
+    color: grey;
+}
+
+.danmakuHover {
+    color: royalblue;
+}
+
+.danmaku-time {
+    width: 15%;
+}
+
+.danmaku-content {
+    overflow: hidden;
+    position: relative;
+    width: 63%;
+}
+
+.like {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    width: 25%;
+    height: 60%;
+    color: white;
+    border-radius: 5px;
+    border: 1px white solid;
+    background-color: deepskyblue;
+}
+
+.likeHind {
+    display: none;
+}
+
+.likeHover {
+    display: inline;
+}
+
+.danmaku-date {
+    position: relative;
+    width: 22%;
+}
+
+.danmaku-date-hind {
+    color: grey;
+}
+
+.danmaku-date-hover {
+    color: white;
+}
+
+.inform {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    height: 60%;
+    color: white;
+    border-radius: 5px;
+    border: 1px white solid;
+    background-color: deepskyblue;
+}
+
+.informHind {
+    display: none;
+}
+
+.informHover {
+    display: inline;
+}
+
+/* 查看更多弹幕 */
+.video-more {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: grey;
+    border-top: 1px gainsboro solid;
+}
+
+/* 视频简介 */
+.video-intro {
+    float: left;
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    border: 1px gainsboro solid;
+    background-color: white;
+    box-shadow: 5px 5px 5px gainsboro;
+}
+
+.video-intro-title {
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+}
+
+.video-intro-title div {
+    margin: 20px 20px 20px 20px;
+}
+
+.video-intro-content {
+    padding-left: 20px;
+    padding-bottom: 20px;
+    color: gray;
+    height: auto;
+}
+
+/* 视频评论 */
+.video-comment-div {
+    float: left;
+    height: auto;
+    margin-top: 10px;
+    border: 1px gainsboro solid;
+    border-bottom-color: white;
+    width: 100%;
+    background-color: white;
+    box-shadow: 5px 5px 5px gainsboro;
+}
+
+.video-comment-title {
+    float: left;
+    border-bottom: 1px gainsboro solid;
+}
+
+.video-comment-submit {
+    float: left;
+    width: 100%;
+    min-height: 150px;
+    height: auto;
+    border-bottom: 1px gainsboro solid;
+}
+
+.headShot-div {
+    float: left;
+    width: 15%;
+    height: 100%;
+}
+
+.headShot {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 40px;
+    overflow: hidden;
+    /*border: 1px black solid;*/
+}
+
+.headShot img {
+    width: 100%;
+    height: 100%;
+}
+
+.attention {
+    float: left;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+}
+
+.attention input {
+    margin-top: 10px;
+    width: 80px;
+}
+
+.video-comment-content {
+    float: left;
+    width: 60%;
+    height: 100%;
+}
+
+.video-comment-content textarea {
+    font-size: 20px;
+    resize: none;
+    margin-top: 10px;
+    width: 95%;
+    min-height: 55px;
+    border-radius: 5px;
+    overflow: auto;
+    word-break: break-all;
+}
+
+.video-comment-btn {
+    float: left;
+    width: 15%;
+    min-height: 120px;
+    height: 100%;
+}
+
+.video-comment-btn input {
+    margin-top: 10px;
+    width: 50%;
+    height: 60px;
+    background-color: deepskyblue;
+    color: white;
+    border: 1px white solid;
+    border-radius: 5px;
+}
+
+.video-comment {
+    width: 100%;
+    height: auto;
+}
+
+.video-comment-item {
+    float: left;
+    width: 100%;
+    height: auto;
+    min-height: 150px;
+    border-bottom: 1px gainsboro solid;
+}
+
+.comment-item {
+    float: left;
+    width: 80%;
+    height: auto;
+    min-height: 150px;
+    /* background-color: wheat; */
+}
+
+.comment-detail {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    /* border: 1px black solid; */
+}
+
+.comment-uname {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 40px;
+    height: 40px;
+    margin-top: 20px;
+}
+
+.comment-content {
+    height: auto;
+    min-height: 30px;
+}
+
+.comment-date {
+    margin-top: 10px;
+    font-size: 13px;
+    color: gray;
+    height: 40px;
+    line-height: 40px;
+}
+
+.comment-date div {
+    float: left;
+    width: 15%;
+    height: 100%;
+    /* border: 1px black solid; */
+}
+
+.comment-like-num {
+    /*5%*/
+    margin-left: 10px;
+    width: 100%;
+    height: 30px;
+    /* border: 1px black solid; */
+}
+
+.comment-date input {
+    width: 50%;
+    height: 30px;
+    border: 1px deepskyblue solid;
+    border-radius: 5px;
+    color: deepskyblue;
+    background-color: white;
+}
+
+.comment-date img {
+    float: left;
+    width: 20%;
+    height: 30px;
+}
+
+.comment-reply input {
+    background: deepskyblue;
+    color: white;
+}
+
+/* 回复 */
+.comment-reply-item {
+    width: 100%;
+    border-top: 1px gainsboro solid;
+    border-bottom: 0px;
+    min-height: 100px;
+}
+
+.comment-item-reply {
+    width: 85%;
+    height: auto;
+    min-height: 100px;
+}
+
+.headShot-reply {
+    width: 50px;
+    height: 50px;
+}
+
+.headShot-div-reply {
+    margin-top: 20px;
+    width: 10%;
+}
+
+.comment-date-reply {
+    margin-top: 0px;
+}
+
+.comment-uname-reply {
+    margin-top: 10px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.video-comment-submit-reply {
+    border-top: 1px gainsboro solid;
+    border-bottom: 0px;
+    margin-left: 13%;
+    width: 80%;
+    min-height: 100px;
+    height: auto;
+}
+
+.video-comment-submit-reply-hind {
+    display: none;
+}
+
+.video-comment-submit-reply-show {
+    display: inline;
+}
+
+.headShot-submit-reply {
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+#videoDemonId {
+    display: none;
+}
+
+.replySpan {
+    color: dimgray;
+}
+
+.video-comment-reply-hind {
+    float: left;
+    width: 100%;
+    height: 30px;
+    border-top: 1px gainsboro solid;
+    color: deepskyblue;
+    text-align: center;
+    line-height: 30px;
+}
+
+.video-bottom {
+    margin-top: 20px;
+    width: 100%;
+    height: 200px;
+    float: left;
+    /*border: 1px gainsboro solid;*/
+    margin-bottom: 20px;
+    background-color: whitesmoke;
+}
+
+/*大型屏幕，电脑*/
+@media screen and (min-width: 1200px) {
+
+}
+
+/*中型屏幕，平板*/
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+
+}
+
+/*小型屏幕，手机*/
+@media screen and (max-width: 768px) {
+    .video-main-infor {
+        width: 100%;
+    }
+
+    .video-detail {
+        width: 73%;
+    }
+
+    .video-infor-date {
+        display: none;
+    }
+
+    .video-like-collect {
+        width: 25%;
+    }
+
+    .video-collect {
+        margin-left: 0%;
+    }
+
+    .video-btn {
+        width: 43%;
+    }
+
+    .video-danmaku {
+        display: none;
+    }
+
+    .up-infor {
+        display: none;
+    }
+
+    .video-play {
+        width: 100%;
+        height: 200px;
+    }
+
+    .video-div {
+        height: 200px
+    }
+
+    .danmaku-submit {
+        display: none;
+    }
+
+    .headShot-div {
+        width: 20%;
+    }
+
+    .headShot {
+        width: 60px;
+        height: 60px;
+    }
+
+    .video-comment-submit {
+        min-height: 80px;
+        height: auto;
+    }
+
+    .video-comment-btn {
+        width: 20%;
+    }
+
+    .video-comment-btn input {
+        width: 90%;
+    }
+
+    .attention input {
+        width: 100%;
+    }
+
+    .date-content {
+        display: none;
+    }
+
+    .comment-date div {
+        float: left;
+        width: 32%;
+        height: 100%;
+        /* border: 1px black solid; */
+    }
+
+    .comment-like {
+        width: 30%;
+    }
+
+    .comment-inform {
+        width: 20%;
+    }
+
+    .comment-inform input {
+        width: 70%;
+    }
+
+    .comment-reply input {
+        width: 70%;
+    }
+
+    .commentLikeBtn {
+        width: 50%;
+    }
+
+    .date-content {
+        width: 20%;
+    }
+
+    .headShot-reply {
+        width: 30px;
+        height: 30px;
+        display: none;
+    }
+
+    .headShot-div-reply {
+        width: 10%;
+    }
+
+    .comment-item-reply {
+        width: 100%;
+    }
+}

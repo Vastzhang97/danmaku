@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>意见收集</title>
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link href="css/advice.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="mainDiv">
+
+    <div class="contribution-title">
+        <span>意见收集</span>
+    </div>
+    <div class="contribution-div">
+        <form id="form" class="form" action="addAdvice" method="post">
+            <div class="contribution-item contribution-item-first">
+                <div class="contribution-item-span">您的名字：</div>
+                <div class="contribution-item-content">
+                    <input type="text" name="name" class="contribution-video-title"/>
+                </div>
+            </div>
+            <div class="contribution-item contribution-item-first">
+                <div class="contribution-item-span">联系方式：</div>
+                <div class="contribution-item-content">
+                    <input type="text" name="contact" class="contribution-video-title"/>
+                </div>
+            </div>
+            <div class="contribution-item contribution-item-intro">
+                <div class="contribution-item-span">意见：</div>
+                <div class="contribution-item-content contribution-item-content-intro">
+                    <textarea id="videoIntro" name="content" class="videoIntro"></textarea>
+                </div>
+            </div>
+            <div class="contribution-item center">
+                <input type="submit" id="submit" class="contribution-submit nav" value="提交意见">
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+
+</html>

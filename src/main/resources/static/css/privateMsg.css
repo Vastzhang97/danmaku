@@ -1,0 +1,273 @@
+.mainDiv {
+    width: 100%;
+    height: auto;
+    min-height: 520px;
+    background-color: white;
+    opacity: 0.8;
+    font-family: YouYuan;
+}
+.mainDivBg{
+    background: url("../images/404.png") no-repeat center;
+}
+a {
+    color: black;
+}
+
+.nav {
+    /*鼠标变手*/
+    cursor: pointer;
+}
+
+.privateMsg-left {
+    float: left;
+    width: 25%;
+    height: 530px;
+    overflow: auto;
+    display: none;
+}
+
+.privateMsg-user-item {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+}
+
+.privateMsg-user-headshot {
+    float: left;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.privateMsg-user-headshot img {
+    width: 100%;
+    height: 100%;
+}
+
+.privateMsg-user-name {
+    float: left;
+    width: 65%;
+    height: 80px;
+    margin-left: 5%;
+    /* border: 1px #CAFFFF solid;  */
+}
+
+.privateMsg-user-item-blur {
+    background-color: white;
+}
+
+.privateMsg-user-item-focus {
+    background-color: powderblue;
+}
+
+.privateMsg-right {
+    float: left;
+    width: 73%;
+    margin-left: 1%;
+    /* min-height: 700px;
+    height: auto; */
+    height: 530px;
+    display: none;
+    /* border: 1px gainsboro solid;  */
+}
+
+.privateMsg-content-row {
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+.privateMsg-content-item {
+    width: 96%;
+    margin-left: 1%;
+    height: 530px;
+    background-color: white;
+    border: 1px gainsboro solid;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.privateMsg-reply-item {
+    width: 96%;
+    margin-left: 2%;
+    margin-top: 10px;
+    height: 120px;
+    border: 1px gainsboro solid;
+    border-radius: 10px;
+}
+.privateMsg-reply-item-hind{
+    display: none;
+}
+
+.video-comment-submit {
+    float: left;
+    width: 100%;
+    min-height: 120px;
+    height: auto;
+    /* border-bottom: 1px gainsboro solid; */
+}
+
+.headShot-div {
+    float: left;
+    width: 15%;
+    height: 100%;
+}
+
+.headShot {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 30px;
+    overflow: hidden;
+    /*border: 1px black solid;*/
+}
+
+.headShot img {
+    width: 100%;
+    height: 100%;
+}
+
+.video-comment-content {
+    float: left;
+    width: 60%;
+    height: 100%;
+}
+
+.video-comment-content textarea {
+    font-size: 20px;
+    resize: none;
+    margin-top: 10px;
+    width: 95%;
+    min-height: 55px;
+    border-radius: 5px;
+    overflow: auto;
+    word-break: break-all;
+}
+
+.video-comment-btn {
+    float: left;
+    width: 15%;
+    min-height: 120px;
+    height: 100%;
+}
+
+.video-comment-btn input {
+    margin-top: 10px;
+    width: 90%;
+    height: 60px;
+    background-color: deepskyblue;
+    color: white;
+    border: 1px white solid;
+    border-radius: 5px;
+}
+
+.privateMsg-content-detail {
+    margin-top: 10px;
+    max-width: 80%;
+    width: auto;
+    min-width: 30%;
+    overflow: hidden;
+    height: auto;
+    min-height: 80px;
+    border-radius: 10px;
+    /*border: 1px gainsboro solid; */
+}
+
+.left-conetnt {
+    float: left;
+    background-color: #CAFFFF;
+}
+
+.right-conetnt {
+    float: right;
+    background-color: #C7C7E2;
+}
+
+.detail-left {
+    float: left;
+    margin-left: 3%;
+}
+
+.detail-right {
+    float: right;
+    margin-right: 3%;
+}
+
+.detail-right .privateMsg-content-title div {
+    float: right;
+}
+
+.detail-right .privateMsg-content-title .privateMsg-content-name {
+    /*margin-left: 5%;*/
+    margin-left: 10px;
+}
+
+.detail-right .privateMsg-content-title .privateMsg-content-date {
+    margin-right: 0;
+}
+
+.detail-right div {
+    /*margin-right: 2%;*/
+    margin-right: 4px;
+}
+
+.privateMsg-content-title {
+    /* float: left; */
+    /* width: 90%; */
+    /* width:auto; */
+    /*margin-left: 2%;*/
+    margin-left: 4px;
+    height: 30px;
+    /* border-bottom: 1px gainsboro solid;  */
+}
+
+.privateMsg-content-title div {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+}
+
+.privateMsg-content-name {
+    font-size: 15px;
+}
+
+.privateMsg-content-date {
+    /*margin-left: 5%;*/
+    margin-left: 10px;
+    color: gray;
+    font-size: 12px;
+}
+
+.privateMsg-content-context {
+    /*float: left; */
+    /* width: 90%; */
+    width: auto;
+    /*min-height: 30px;*/
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    /*background-color: blue; */
+}
+
+.privateMsg-tip {
+    float: right;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    /*background-color: blue;*/
+    margin-top: 25px;
+    border-radius: 15px;
+    line-height: 0px;
+}
+
+.privateMsg-tip img {
+    width: 100%;
+    height: 100%;
+}
